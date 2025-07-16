@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ярий — «Не жени»</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Rubik:wght@900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            position: relative;
+            overflow-x: hidden;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://i.ibb.co/bMwVNTs4/IMG-0504.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: blur(15px) brightness(0.6);
+            z-index: -2;
+        }
+        
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+        
+        .cover {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin: 0 auto 25px;
+            display: block;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+        }
+        
+        h1 {
+            font-family: 'Rubik', sans-serif;
+            font-size: 32px;
+            margin: 0 0 5px;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+            color: white;
+            animation: breath 3s ease-in-out infinite;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        
+        @keyframes breath {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        h2 {
+            font-size: 18px;
+            margin: 0 0 30px;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 20px;
+            border-radius: 0;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            backdrop-filter: blur(5px);
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .apple:hover { background: rgba(0, 0, 0, 0.4); }
+        .spotify:hover { background: rgba(29, 185, 84, 0.4); }
+        .youtube:hover, .youtube-music:hover { background: rgba(255, 0, 0, 0.4); }
+        .telegram:hover { background: rgba(0, 136, 204, 0.4); }
+        
+        .icon {
+            width: 22px;
+            height: 22px;
+            margin-right: 12px;
+        }
+        
+        .youtube .icon, .youtube-music .icon {
+            content: url('https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg');
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 28px;
+            }
+            h2 {
+                font-size: 16px;
+                margin-bottom: 25px;
+            }
+            .btn {
+                padding: 12px 15px;
+            }
+        }
+        
+        @media (max-width: 350px) {
+            .cover {
+                margin-bottom: 20px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            .btn {
+                padding: 10px 12px;
+                font-size: 14px;
+            }
+            .icon {
+                width: 18px;
+                height: 18px;
+                margin-right: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="https://i.ibb.co/bMwVNTs4/IMG-0504.jpg" alt="Обкладинка «Не жени»" class="cover">
+    
+    <h1>НЕ ЖЕНИ</h1>
+    <h2>ЯРИЙ</h2>
+    
+    <div class="buttons">
+        <a href="https://music.apple.com/ua/album/%D0%BD%D0%B5-%D0%B6%D0%B5%D0%BD%D0%B8/1824120087?i=1824120088&l=ru" class="btn apple">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" class="icon" alt="Apple Music">
+            APPLE MUSIC
+        </a>
+        <a href="https://open.spotify.com/album/5FRQ5ESUtn0GEyJ9gfYcYK?si=cHkRZLmeS2ayJ4H9orBWfA" class="btn spotify">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" class="icon" alt="Spotify">
+            SPOTIFY
+        </a>
+        <a href="https://youtu.be/5OD_3ILFH_c?si=_5TN6LWdI-11mfpW" class="btn youtube">
+            <img src="" class="icon" alt="YouTube">
+            YOUTUBE
+        </a>
+        <a href="https://music.youtube.com/watch?v=RL43oor1z_w&si=cZR-4gInDEhC3Qru" class="btn youtube-music">
+            <img src="" class="icon" alt="YouTube Music">
+            YOUTUBE MUSIC
+        </a>
+
+        </a>
+    </div>
+</body>
+</html>
